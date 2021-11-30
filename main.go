@@ -10,7 +10,9 @@ import (
 
 func main() {
 	h := http.HandlerFunc(Echo)
+
 	log.Println("we liastening on port:8000")
+
 	if err := http.ListenAndServe("localhost:8000", h); err != nil {
 		log.Fatal(err)
 	}
